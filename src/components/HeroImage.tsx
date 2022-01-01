@@ -7,6 +7,7 @@ export default function HeroImage() {
   const [introLoaded, setIntroLoaded] = useState(false);
   const [nameLoaded, setNameLoaded] = useState(false);
   const [frag1Loaded, setFrag1Loaded] = useState(false);
+  const [frag2Loaded, setFrag2Loaded] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,13 +15,16 @@ export default function HeroImage() {
     }, 1400);
     setTimeout(() => {
       setIntroLoaded(true);
-    }, 2700);
+    }, 2500);
     setTimeout(() => {
       setNameLoaded(true);
     }, 4200);
     setTimeout(() => {
       setFrag1Loaded(true);
     }, 5100);
+    setTimeout(() => {
+      setFrag2Loaded(true);
+    }, 7100);
   }, [setLoaded]);
 
   return (
@@ -72,6 +76,12 @@ export default function HeroImage() {
           >
             interactive websites and web-apps.
           </h2>
+          <button
+            style={{ opacity: frag2Loaded ? "1" : "0" }}
+            className="primaryButton"
+          >
+            My work
+          </button>
         </div>
       </div>
     </div>

@@ -20,7 +20,6 @@ export default function Header() {
       <div className="menu">
         MENU <FontAwesomeIcon className="hamburger" icon={faBars} />
       </div>
-      <div></div>
     </div>
   );
 }
