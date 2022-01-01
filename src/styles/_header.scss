@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.header {
+  @include flexCenter(space-between);
+  height: 70px;
+  width: 100%;
+  background-color: $primaryColor;
+  color: white;
+  top: 0px;
+  font-family: $mainFont;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  position: absolute;
+  div {
+    margin: 0px 5%;
+  }
+  transition: all 2s;
+  z-index: 2;
+}
+
+.logo {
+  div {
+    margin: 0px 10px;
+    transition: all 0.5s;
+  }
+  cursor: pointer;
+  @include flexCenter(space-between);
+  &:hover {
+    .myName {
+      background-color: $secondaryColor;
+    }
+    .portfolio {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.myName {
+  background-color: white;
+  color: $primaryColor;
+  padding: 2px;
+}
+
+.menu {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: $secondaryColor;
+}

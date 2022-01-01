@@ -1,0 +1,15 @@
+$primaryColor: #212744;
+$secondaryColor: #9bf1ff;
+$tertiaryColor: #cef1f6;
+$mainFont: "Source Sans Pro", Helvetica, sans-serif;
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin fontFormat($size) {
+  color: white;
+  font-size: $size;
+  font-weight: bold;
+}

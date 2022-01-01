@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@import "./variables";
+@import "./header";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: $mainFont;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.heroImage {
+  height: 800px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroFade {
+  width: 100%;
+  height: 100%;
+  background-color: $primaryColor;
+  opacity: 0.9;
+  @include flexCenter(flex-start);
+}
+
+.heroIntro {
+  @include fontFormat(15px);
+  margin-left: 2px;
+}
+.heroTitle {
+  @include fontFormat(50px);
+}
+.heroCaption {
+  @include fontFormat(40px);
+  color: $tertiaryColor;
+}
+
+.heroCaptionFrag1 {
+  @include fontFormat(18px);
+  color: $tertiaryColor;
+  display: none;
+}
+
+.heroCaptionFrag2 {
+  @include fontFormat(18px);
+  color: $tertiaryColor;
+  display: none;
+}
+
+.heroTextContainer {
+  margin-left: 10%;
+}
+
+.heroText {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.initHeroText {
+  width: 0px;
+}
+
+.animatedHeroIntro {
+  animation: typing 1s steps(13, end);
+}
+
+.animatedHeroTitle {
+  animation: typing 1s steps(13, end);
+}
+.animatedHeroCaption {
+  animation: typing 3s steps(50, end);
+}
+
+.animatedHeroCaptionFrag1 {
+  animation: typing 1s steps(20, end);
+}
+.animatedHeroCaptionFrag2 {
+  animation: typing 2s steps(30, end);
+}
+
+@media (max-width: 1200px) {
+  .heroImage {
+    height: 600px;
+  }
+
+  .heroIntro {
+    @include fontFormat(15px);
+  }
+  .heroTitle {
+    @include fontFormat(40px);
+  }
+  .heroCaption {
+    @include fontFormat(30px);
+    color: $tertiaryColor;
+  }
+}
+
+@media (max-width: 1000px) {
+  .heroImage {
+    height: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroImage {
+    height: 600px;
+  }
+
+  .heroIntro {
+    @include fontFormat(15px);
+  }
+  .heroTitle {
+    @include fontFormat(30px);
+  }
+  .heroCaption {
+    @include fontFormat(20px);
+    color: $tertiaryColor;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroImage {
+    height: 600px;
+  }
+
+  .heroIntro {
+    @include fontFormat(12px);
+  }
+  .heroTitle {
+    @include fontFormat(30px);
+  }
+  .heroCaption {
+    @include fontFormat(15px);
+    color: $tertiaryColor;
+    display: none;
+  }
+
+  .heroCaptionFrag1 {
+    display: block;
+  }
+
+  .heroCaptionFrag2 {
+    display: block;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
