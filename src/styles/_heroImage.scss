@@ -69,21 +69,3 @@
 .animatedHeroCaptionFrag2 {
   animation: typing 2s steps(30, end);
 }
-
-.primaryButton {
-  margin: 20px 0px;
-  width: 6em;
-  height: 30px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  font-weight: bold;
-  transition: all 1s;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.primaryButton:hover {
-  background-color: $secondaryColor;
-  color: $primaryColor;
-}

@@ -121,3 +121,33 @@
     width: 100%;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// menu
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  inset: 0;
+  background-color: rgba(33, 39, 68, 0.7);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+.activeMenu {
+  animation: fadeIn 2s;
+  animation-fill-mode: forwards;
+}
