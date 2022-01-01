@@ -35,7 +35,7 @@
 
 @media (max-width: 1200px) {
   .heroImage {
-    height: 600px;
+    height: 800px;
   }
 
   .heroIntro {
@@ -51,16 +51,9 @@
 }
 
 @media (max-width: 1000px) {
-  .heroImage {
-    height: 600px;
-  }
 }
 
 @media (max-width: 800px) {
-  .heroImage {
-    height: 600px;
-  }
-
   .heroIntro {
     @include fontFormat(15px);
   }
@@ -141,6 +134,7 @@
   background-color: rgba(33, 39, 68, 0.7);
   backdrop-filter: blur(10px);
   opacity: 0;
+  display: none;
   color: white;
   justify-content: center;
   align-items: center;
@@ -150,4 +144,24 @@
 .activeMenu {
   animation: fadeIn 2s;
   animation-fill-mode: forwards;
+  display: flex !important;
+}
+
+.exitMenu {
+  position: absolute;
+  right: 5%;
+  top: 80px;
+  cursor: pointer;
+}
+
+.menuListContainer {
+  @include flexCenter(space-between);
+  flex-direction: column;
+  height: 250px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menuItem {
+  cursor: pointer;
 }
