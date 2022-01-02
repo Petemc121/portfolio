@@ -2,6 +2,7 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import HeroImage from "./components/HeroImage";
 import Menu from "./components/Menu";
+import Projects from "./components/Projects";
 import { useState } from "react";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header menuActive={menuActive} setMenuActive={setMenuActive} />
       <HeroImage />
       <Menu setMenuActive={setMenuActive} menuActive={menuActive} />
+      <Projects />
     </div>
   );
 }

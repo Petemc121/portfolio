@@ -159,9 +159,91 @@
   flex-direction: column;
   height: 250px;
   font-size: 30px;
-  font-weight: bold;
 }
 
 .menuItem {
   cursor: pointer;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.menuItem:hover {
+  font-size: 1.2em;
+}
+
+// projects
+
+.silverbacks {
+  grid-area: silverbacks;
+  background-color: #74bad4;
+}
+.roamingrolls {
+  grid-area: roamingrolls;
+  background-color: #8179b6;
+}
+.covid-app {
+  grid-area: covid-app;
+  background-color: #dd8b83;
+}
+.mat-tracker {
+  grid-area: mat-tracker;
+  background-color: #d8af88;
+}
+
+.ebp {
+  grid-area: ebp;
+  background-color: #829ad2;
+}
+
+.bjj-notes {
+  grid-area: bjj-notes;
+  background-color: #7cb199;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks "
+    "mat-tracker mat-tracker covid-app covid-app covid-app"
+    "ebp ebp ebp bjj-notes bjj-notes";
+}
+
+.project {
+  cursor: pointer;
+  transition: all 0.5s;
+  height: 600px;
+  text-align: center;
+}
+
+.project:hover {
+  background-position: center;
+  background-color: transparent;
+}
+
+.projectImage {
+  opacity: 0;
+  transition: all 0.5s;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectText {
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -300px;
+  text-align: start;
+}
+
+.projectTitle {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.projectDescription {
+  color: white;
+  font-size: 25px;
 }

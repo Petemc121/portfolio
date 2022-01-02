@@ -369,10 +369,114 @@
           flex-direction: column;
   height: 250px;
   font-size: 30px;
-  font-weight: bold;
 }
 
 .menuItem {
   cursor: pointer;
+  padding: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.menuItem:hover {
+  font-size: 1.2em;
+}
+
+.silverbacks {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: silverbacks;
+  background-color: #74bad4;
+}
+
+.roamingrolls {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: roamingrolls;
+  background-color: #8179b6;
+}
+
+.covid-app {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: covid-app;
+  background-color: #dd8b83;
+}
+
+.mat-tracker {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mat-tracker;
+  background-color: #d8af88;
+}
+
+.ebp {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: ebp;
+  background-color: #829ad2;
+}
+
+.bjj-notes {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: bjj-notes;
+  background-color: #7cb199;
+}
+
+.projectsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "mat-tracker mat-tracker covid-app covid-app covid-app" "ebp ebp ebp bjj-notes bjj-notes";
+}
+
+.project {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 600px;
+  text-align: center;
+}
+
+.project:hover {
+  background-position: center;
+  background-color: transparent;
+}
+
+.projectImage {
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectText {
+  position: absolute;
+  margin-left: 30px;
+  margin-top: -300px;
+  text-align: start;
+}
+
+.projectTitle {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.projectDescription {
+  color: white;
+  font-size: 25px;
 }
 /*# sourceMappingURL=App.css.map */
