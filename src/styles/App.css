@@ -20,8 +20,8 @@
   letter-spacing: 3px;
   font-weight: bold;
   position: absolute;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
   z-index: 2;
 }
 
@@ -196,8 +196,8 @@ html {
   border: 2px solid white;
   color: white;
   font-weight: bold;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
   cursor: pointer;
   opacity: 0;
 }
@@ -349,8 +349,8 @@ html {
 
 .projectImage {
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   position: relative;
   width: 100%;
   height: 100%;
@@ -469,6 +469,10 @@ html {
 @media (max-width: 400px) {
   .header {
     font-size: 12px;
+  }
+  .projectDescription {
+    font-size: 15px;
+    max-width: 120px;
   }
   .logo div {
     margin: 0px 5px;

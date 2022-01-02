@@ -29,7 +29,7 @@ html {
   border: 2px solid white;
   color: white;
   font-weight: bold;
-  transition: all 1s;
+  transition: background-color 1s;
   cursor: pointer;
   opacity: 0;
 }
@@ -141,7 +141,7 @@ html {
 
 .projectImage {
   opacity: 0;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
   position: relative;
   width: 100%;
   height: 100%;
@@ -250,6 +250,11 @@ html {
 @media (max-width: 400px) {
   .header {
     font-size: 12px;
+  }
+
+  .projectDescription {
+    font-size: 15px;
+    max-width: 120px;
   }
 
   .logo {
