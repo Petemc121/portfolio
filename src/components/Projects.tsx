@@ -46,7 +46,7 @@ export default function Projects() {
       img: matTracker,
       title: "Mat Tracker",
       description:
-        "A PERN stack built web-app that log members of a jiujitsu gym in it's database",
+        "A PERN stack built web-app that logs members of a jiujitsu gym in it's database",
       setProjectHovered: setProjectHovered,
       projectHovered: projectHovered,
     },

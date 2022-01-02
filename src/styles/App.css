@@ -411,8 +411,8 @@
 }
 
 .mat-tracker {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
   -ms-grid-column-span: 2;
   grid-area: mat-tracker;
   background-color: #d8af88;
@@ -427,8 +427,8 @@
 }
 
 .bjj-notes {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: bjj-notes;
   background-color: #7cb199;
@@ -443,7 +443,7 @@
       grid-template-columns: repeat(5, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "mat-tracker mat-tracker covid-app covid-app covid-app" "portfolio portfolio portfolio bjj-notes bjj-notes";
+      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "bjj-notes bjj-notes covid-app covid-app covid-app" "portfolio portfolio portfolio mat-tracker mat-tracker";
 }
 
 .project {
