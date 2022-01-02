@@ -232,6 +232,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  filter: brightness(70%);
 }
 
 .projectText {
@@ -245,10 +246,31 @@
   color: white;
   font-size: 30px;
   font-weight: bold;
+  line-height: 20px;
+  transition: all 0.5s;
+  margin: 10px 0px;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.projectTitle:hover {
+  color: $secondaryColor;
 }
 
 .projectDescription {
   color: white;
   font-size: 25px;
   max-width: 400px;
+  margin: 10px 0px;
+}
+
+.githubIcon {
+  color: white;
+  transition: all 0.5s;
+  margin: 10px 0px;
+}
+.githubIcon:hover {
+  color: $secondaryColor;
 }
