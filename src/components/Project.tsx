@@ -14,7 +14,7 @@ interface projectInput {
 
 export default function Project({ project }: projectInput) {
   const handleProjectHoverIn = (e: any) => {
-    e.target.style.opacity = "0.7";
+    e.target.style.opacity = "1";
   };
 
   const handleProjectHoverOut = (e: any) => {
