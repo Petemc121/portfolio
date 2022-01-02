@@ -176,6 +176,10 @@
   font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   height: 100vh;
   scrollbar-width: none;
@@ -203,120 +207,24 @@
   color: #212744;
 }
 
-@media (max-width: 1200px) {
-  .heroImage {
-    height: 800px;
-  }
-  .heroIntro {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .heroTitle {
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-  }
-  .heroCaption {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    color: #cef1f6;
-  }
+.projectsContainer {
+  width: 100vw;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "bjj-notes bjj-notes covid-app covid-app covid-app" "portfolio portfolio portfolio mat-tracker mat-tracker";
 }
 
-@media (max-width: 800px) {
-  .heroIntro {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .heroTitle {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .heroCaption {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    color: #cef1f6;
-  }
-}
-
-@media (max-width: 400px) {
-  .header {
-    font-size: 12px;
-  }
-  .logo div {
-    margin: 0px 5px;
-  }
-  .heroImage {
-    height: 600px;
-  }
-  .heroIntro {
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-  }
-  .heroTitle {
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .heroCaption {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    color: #cef1f6;
-    display: none;
-  }
-  .heroCaptionFrag1 {
-    display: block;
-  }
-  .heroCaptionFrag2 {
-    display: block;
-  }
-  .primaryButton {
-    font-size: 15px;
-    height: 30px;
-  }
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.project {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 600px;
+  text-align: center;
 }
 
 .menu {
@@ -434,26 +342,6 @@
   background-color: #7cb199;
 }
 
-.projectsContainer {
-  width: 100vw;
-  max-width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "bjj-notes bjj-notes covid-app covid-app covid-app" "portfolio portfolio portfolio mat-tracker mat-tracker";
-}
-
-.project {
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 600px;
-  text-align: center;
-}
-
 .project:hover {
   background-position: center;
   background-color: transparent;
@@ -511,5 +399,145 @@
 
 .githubIcon:hover {
   color: #9bf1ff;
+}
+
+@media (max-width: 1200px) {
+  .projectsContainer {
+    width: 100vw;
+    max-width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "roamingrolls silverbacks " "bjj-notes covid-app" "portfolio mat-tracker";
+  }
+  .project {
+    height: 400px;
+  }
+  .heroImage {
+    height: 800px;
+  }
+  .heroIntro {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .heroTitle {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .heroCaption {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    color: #cef1f6;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroIntro {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .heroTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .heroCaption {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: #cef1f6;
+  }
+  .project {
+    height: 300px;
+  }
+  .projectTitle {
+    font-size: 20px;
+  }
+  .projectDescription {
+    font-size: 15px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    font-size: 12px;
+  }
+  .logo div {
+    margin: 0px 5px;
+  }
+  .heroImage {
+    height: 600px;
+  }
+  .heroIntro {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .heroTitle {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .heroCaption {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    color: #cef1f6;
+    display: none;
+  }
+  .heroCaptionFrag1 {
+    display: block;
+  }
+  .heroCaptionFrag2 {
+    display: block;
+  }
+  .primaryButton {
+    font-size: 15px;
+    height: 30px;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=App.css.map */

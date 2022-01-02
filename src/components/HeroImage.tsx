@@ -76,12 +76,14 @@ export default function HeroImage() {
           >
             interactive websites and web-apps.
           </h2>
-          <button
-            style={{ opacity: frag2Loaded ? "1" : "0" }}
-            className="primaryButton"
-          >
-            My work
-          </button>
+          <a href="#projectsContainer">
+            <button
+              style={{ opacity: frag2Loaded ? "1" : "0" }}
+              className="primaryButton"
+            >
+              My work
+            </button>
+          </a>
         </div>
       </div>
     </div>

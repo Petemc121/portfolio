@@ -84,7 +84,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="projectsContainer">
+    <div id="projectsContainer" className="projectsContainer">
       {projects.map((project) => {
         return <Project project={project} />;
       })}
