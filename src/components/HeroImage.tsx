@@ -24,7 +24,7 @@ export default function HeroImage() {
     }, 5100);
     setTimeout(() => {
       setFrag2Loaded(true);
-    }, 7100);
+    }, 7300);
   }, [setLoaded]);
 
   return (

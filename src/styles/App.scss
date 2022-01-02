@@ -11,7 +11,9 @@
 
 .App {
   height: 100vh;
+  scrollbar-width: none;
   width: 100vw;
+  max-width: 100%;
 }
 
 .primaryButton {
@@ -190,8 +192,8 @@
   background-color: #d8af88;
 }
 
-.ebp {
-  grid-area: ebp;
+.portfolio {
+  grid-area: portfolio;
   background-color: #829ad2;
 }
 
@@ -201,13 +203,15 @@
 }
 
 .projectsContainer {
+  width: 100vw;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
     "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks "
     "mat-tracker mat-tracker covid-app covid-app covid-app"
-    "ebp ebp ebp bjj-notes bjj-notes";
+    "portfolio portfolio portfolio bjj-notes bjj-notes";
 }
 
 .project {

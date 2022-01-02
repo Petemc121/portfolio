@@ -30,7 +30,7 @@ export default function Header({ menuActive, setMenuActive }: headerInput) {
     <div style={{ opacity: loaded ? "1" : "0" }} className="header">
       <div className="logo">
         <div className="myName"> Pete's</div>{" "}
-        <div className="portfolio">Portfolio</div>
+        <div className="logoText">Portfolio</div>
       </div>
       <div
         onClick={menuActive ? deactivateMenu : activateMenu}
