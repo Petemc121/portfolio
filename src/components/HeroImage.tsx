@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "../images/hero.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function HeroImage() {
   const [loaded, setLoaded] = useState(false);
@@ -8,6 +8,19 @@ export default function HeroImage() {
   const [nameLoaded, setNameLoaded] = useState(false);
   const [frag1Loaded, setFrag1Loaded] = useState(false);
   const [frag2Loaded, setFrag2Loaded] = useState(false);
+
+  const background = useRef<HTMLDivElement>(null);
+
+  // const handleMouseOver = (e: any) => {
+  //   if (background.current) {
+  //     background.current.style.backgroundPositionX =
+  //       -e.nativeEvent.offsetX + "px";
+  //     background.current.style.backgroundPositionY =
+  //       -e.nativeEvent.offsetX + "px";
+
+  //     console.log(e);
+  //   }
+  // };
 
   useEffect(() => {
     setTimeout(() => {
@@ -28,7 +41,11 @@ export default function HeroImage() {
   }, [setLoaded]);
 
   return (
-    <div style={{ backgroundImage: `url(${hero})` }} className="heroImage">
+    <div
+      ref={background}
+      style={{ backgroundImage: `url(${hero})` }}
+      className="heroImage"
+    >
       <div className="heroFade">
         <div className="heroTextContainer">
           <div
