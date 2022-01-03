@@ -1,10 +1,10 @@
 import React from "react";
-import AboutText from "./AboutText";
+import SlideInText from "./SlideInText";
 import SkillLogo from "./SkillLogo";
 
 export default function About() {
   const aboutDescription =
-    "Hi, I'm Pete. I'm a self taught front end web developer with a passion for creating beautiful, dynamic websites/web-apps that engage users instantly. Currently my expertise is in JavaScript developement with React and TypeScript and using Sass as a CSS framework, however I also have experience in back end technologies such as PHP, Express, posrgreSQL and WordPress developement.";
+    "Hi, I'm Pete. I'm a self taught front end web developer with a passion for creating beautiful, dynamic websites/web-apps that engage users instantly. Currently my expertise is in JavaScript developement with React and TypeScript and using Sass as a CSS framework, however I also have experience in back end technologies such as PHP, Express, postrgreSQL and WordPress developement.";
 
   const firstLogos = [
     {
@@ -68,11 +68,14 @@ export default function About() {
     },
   ];
   return (
-    <div className="aboutContainer">
+    <div id="aboutContainer" className="aboutContainer">
       <div className="aboutText">
-        <AboutText textClass="aboutTitle" text="About me" />
-        <AboutText textClass="aboutDescription" text={aboutDescription} />
-        <AboutText textClass="aboutTitle skillSet" text={"Specialised In..."} />
+        <SlideInText textClass="aboutTitle" text="About me" />
+        <SlideInText textClass="aboutDescription" text={aboutDescription} />
+        <SlideInText
+          textClass="aboutTitle skillSet"
+          text={"Specialised In..."}
+        />
       </div>
       <div className="skillLogoContainer">
         {firstLogos.map((logo) => {
@@ -80,7 +83,7 @@ export default function About() {
         })}
       </div>
       <div className="aboutText">
-        <AboutText
+        <SlideInText
           textClass="aboutTitle skillSet"
           text={"Experience with..."}
         />

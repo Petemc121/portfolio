@@ -4,6 +4,7 @@ import HeroImage from "./components/HeroImage";
 import Menu from "./components/Menu";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Menu setMenuActive={setMenuActive} menuActive={menuActive} />
       <Projects />
       <About />
+      <Contact />
     </div>
   );
 }

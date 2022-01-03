@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.contactContainer {
+  background-color: $quaternaryColor;
+  padding: 50px;
+}
+
+.contactTitle {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  right: 200px;
+}
+
+.contactItemTitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  right: 200px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.contactItem {
+  width: 50%;
+  min-width: 200px;
+  padding: 10px;
+  margin: 20px 50px;
+  background-color: $primaryColor;
+  color: white;
+  border: none;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+#contactButton {
+  margin-left: 50px;
+}
+
+.contactName {
+  height: 40px;
+  font-size: 25px;
+}
+
+.contactEmail {
+  height: 40px;
+  font-size: 25px;
+}
+
+.contactMessage {
+  height: 200px;
+  font-size: 20px;
+}
