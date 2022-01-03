@@ -27,7 +27,9 @@ export default function Menu({ menuActive, setMenuActive }: menuInput) {
         <a onClick={deactivateMenu} className="links" href="#aboutContainer">
           <div className="menuItem">About me</div>
         </a>
-        <div className="menuItem">Blog</div>
+        <a className="links" href="https://roamingrolls.com/pete-programmes/">
+          <div className="menuItem">Blog</div>
+        </a>
         <a onClick={deactivateMenu} className="links" href="#contactContainer">
           <div className="menuItem">Contact</div>
         </a>
