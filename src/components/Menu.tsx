@@ -21,7 +21,9 @@ export default function Menu({ menuActive, setMenuActive }: menuInput) {
         size="2x"
       />
       <div className="menuListContainer">
-        <div className="menuItem">My work</div>
+        <a onClick={deactivateMenu} className="links" href="#projectsContainer">
+          <div className="menuItem">My work</div>
+        </a>
         <div className="menuItem">About me</div>
         <div className="menuItem">Blog</div>
         <div className="menuItem">Contact</div>

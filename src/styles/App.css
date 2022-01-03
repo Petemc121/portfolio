@@ -170,63 +170,6 @@
           animation: typing 2s steps(30, end);
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.App {
-  height: 100vh;
-  scrollbar-width: none;
-  width: 100vw;
-  max-width: 100%;
-}
-
-.primaryButton {
-  margin: 20px 0px;
-  width: 6em;
-  font-size: 25px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  font-weight: bold;
-  -webkit-transition: background-color 1s;
-  transition: background-color 1s;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.primaryButton:hover {
-  background-color: #9bf1ff;
-  color: #212744;
-}
-
-.projectsContainer {
-  width: 100vw;
-  max-width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "bjj-notes bjj-notes covid-app covid-app covid-app" "portfolio portfolio portfolio mat-tracker mat-tracker";
-}
-
-.project {
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 600px;
-  text-align: center;
-}
-
 .menu {
   position: fixed;
   height: 100vh;
@@ -292,6 +235,26 @@ html {
 
 .menuItem:hover {
   font-size: 1.2em;
+}
+
+.projectsContainer {
+  width: 100vw;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "roamingrolls roamingrolls roamingrolls silverbacks  silverbacks " "bjj-notes bjj-notes covid-app covid-app covid-app" "portfolio portfolio portfolio mat-tracker mat-tracker";
+}
+
+.project {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 600px;
+  text-align: center;
 }
 
 .silverbacks {
@@ -377,6 +340,7 @@ html {
 
 .links {
   text-decoration: none;
+  color: white;
 }
 
 .projectTitle:hover {
@@ -399,6 +363,75 @@ html {
 
 .githubIcon:hover {
   color: #9bf1ff;
+}
+
+.aboutContainer {
+  padding: 50px;
+  overflow-x: hidden;
+  max-width: 100%;
+  height: 800px;
+  background-color: #212744;
+}
+
+.aboutText {
+  color: white;
+  max-width: 80%;
+  font-size: 30px;
+  margin-top: 20px;
+  position: relative;
+  right: 200px;
+}
+
+.aboutTitle {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.aboutDescription {
+  line-height: 50px;
+}
+
+.slideIn {
+  -webkit-animation: slideIn 2s forwards;
+          animation: slideIn 2s forwards;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.App {
+  height: 100vh;
+  scrollbar-width: none;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.primaryButton {
+  margin: 20px 0px;
+  width: 6em;
+  font-size: 25px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.primaryButton:hover {
+  background-color: #9bf1ff;
+  color: #212744;
 }
 
 @media (max-width: 1200px) {
@@ -541,6 +574,32 @@ html {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
     opacity: 1;
   }
 }
