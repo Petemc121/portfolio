@@ -144,6 +144,23 @@ html {
     font-size: 15px;
     height: 30px;
   }
+
+  .aboutDescription {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .aboutTitle {
+    font-size: 20px;
+  }
+
+  .skillLogoContainer {
+    margin: 50px auto;
+  }
+
+  .skillSet {
+    margin: 50px auto;
+  }
 }
 
 @keyframes typing {

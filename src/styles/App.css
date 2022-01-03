@@ -406,6 +406,7 @@
   opacity: 0;
   position: relative;
   top: 50px;
+  margin: 10px 10px;
 }
 
 .skillLogoContainer {
@@ -417,6 +418,8 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 * {
@@ -561,6 +564,19 @@ html {
   .primaryButton {
     font-size: 15px;
     height: 30px;
+  }
+  .aboutDescription {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .aboutTitle {
+    font-size: 20px;
+  }
+  .skillLogoContainer {
+    margin: 50px auto;
+  }
+  .skillSet {
+    margin: 50px auto;
   }
 }
 

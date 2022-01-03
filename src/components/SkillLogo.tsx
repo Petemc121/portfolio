@@ -7,7 +7,7 @@ interface skillLogoInput {
 }
 
 export default function SkillLogo({ src, delay }: skillLogoInput) {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <img
       ref={ref}

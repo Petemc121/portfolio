@@ -40,6 +40,7 @@
   opacity: 0;
   position: relative;
   top: 50px;
+  margin: 10px 10px;
 }
 
 .skillLogoContainer {
@@ -47,4 +48,5 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 50px;
+  flex-wrap: wrap;
 }

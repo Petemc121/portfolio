@@ -7,7 +7,7 @@ interface aboutTextInput {
 }
 
 export default function AboutText({ text, textClass }: aboutTextInput) {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
     <div ref={ref} className={inView ? textClass + " slideIn" : textClass}>
