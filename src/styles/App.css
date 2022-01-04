@@ -493,6 +493,14 @@
   font-size: 20px;
 }
 
+.emailSentResponse {
+  font-size: 25px;
+  margin-left: 50px;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 * {
   margin: 0px;
   padding: 0px;
