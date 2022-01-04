@@ -8,6 +8,8 @@ export default function HeroImage() {
   const [nameLoaded, setNameLoaded] = useState(false);
   const [frag1Loaded, setFrag1Loaded] = useState(false);
   const [frag2Loaded, setFrag2Loaded] = useState(false);
+  const [but1Loaded, setbut1Loaded] = useState(false);
+  const [but2Loaded, setbut2Loaded] = useState(false);
 
   const background = useRef<HTMLDivElement>(null);
 
@@ -38,6 +40,12 @@ export default function HeroImage() {
     setTimeout(() => {
       setFrag2Loaded(true);
     }, 7300);
+    setTimeout(() => {
+      setbut1Loaded(true);
+    }, 7800);
+    setTimeout(() => {
+      setbut2Loaded(true);
+    }, 8300);
   }, [setLoaded]);
 
   return (
@@ -93,14 +101,32 @@ export default function HeroImage() {
           >
             interactive websites and web-apps.
           </h2>
-          <a href="#projectsContainer">
-            <button
-              style={{ opacity: frag2Loaded ? "1" : "0" }}
-              className="primaryButton"
-            >
-              My work
-            </button>
-          </a>
+          <div className="heroButtonContainer">
+            <a href="#projectsContainer">
+              <button
+                style={{ opacity: frag2Loaded ? "1" : "0" }}
+                className="primaryButton"
+              >
+                Projects
+              </button>
+            </a>
+            <a href="https://github.com/Petemc121">
+              <button
+                style={{ opacity: but1Loaded ? "1" : "0" }}
+                className="primaryButton"
+              >
+                Github
+              </button>
+            </a>
+            <a href="https://roamingrolls.com/pete-programmes/">
+              <button
+                style={{ opacity: but2Loaded ? "1" : "0" }}
+                className="primaryButton"
+              >
+                Blog
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
