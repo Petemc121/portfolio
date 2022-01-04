@@ -147,13 +147,13 @@
 }
 
 .animatedHeroIntro {
-  -webkit-animation: typing 1s steps(13, end);
-          animation: typing 1s steps(13, end);
+  -webkit-animation: typing 2s steps(30, end);
+          animation: typing 2s steps(30, end);
 }
 
 .animatedHeroTitle {
-  -webkit-animation: typing 1s steps(13, end);
-          animation: typing 1s steps(13, end);
+  -webkit-animation: typing 2s steps(30, end);
+          animation: typing 2s steps(30, end);
 }
 
 .animatedHeroCaption {
