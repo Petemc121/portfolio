@@ -4,7 +4,7 @@ import ContactItem from "./ContactItem";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const [email, setEmail] = useState<Record<string, unknown>>({
+  const [email, setEmail] = useState<any>({
     user_name: null,
     user_email: null,
     user_message: null,
@@ -82,9 +82,9 @@ export default function Contact() {
         setEmailInvalid(true);
 
         setEmail({
-          user_name: null,
+          user_name: email.user_name,
           user_email: null,
-          user_message: null,
+          user_message: email.user_message,
         });
 
         setTimeout(() => {
@@ -93,11 +93,6 @@ export default function Contact() {
       }
     } else {
       setFieldsMissing(true);
-      setEmail({
-        user_name: null,
-        user_email: null,
-        user_message: null,
-      });
 
       setTimeout(() => {
         setFieldsMissing(false);
@@ -118,6 +113,7 @@ export default function Contact() {
             type="text"
             input={true}
             handleChange={handleChange}
+            value={email.user_name}
           />
           <SlideInText textClass="contactItemTitle" text="Email" />
           <ContactItem
@@ -126,6 +122,7 @@ export default function Contact() {
             type="email"
             input={true}
             handleChange={handleChange}
+            value={email.user_email}
           />
           <SlideInText textClass="contactItemTitle" text="Message" />
           <ContactItem
@@ -134,6 +131,7 @@ export default function Contact() {
             type="text"
             input={false}
             handleChange={handleChange}
+            value={email.user_message}
           />
           <button
             style={{ opacity: "1" }}

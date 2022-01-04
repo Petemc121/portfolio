@@ -7,6 +7,7 @@ interface contactItemInput {
   name: string;
   handleChange: (event: any) => void;
   type: string;
+  value: string | undefined;
 }
 
 export default function ContactItem({
@@ -14,9 +15,10 @@ export default function ContactItem({
   input,
   name,
   handleChange,
+  value,
 }: contactItemInput) {
   const { ref, inView } = useInView({ triggerOnce: true });
-
+  console.log(value);
   if (input === true) {
     return (
       <input
@@ -25,6 +27,7 @@ export default function ContactItem({
         name={name}
         style={{ animation: inView ? "slideUp 1s forwards" : "none" }}
         onChange={handleChange}
+        value={value === null ? "" : value}
       ></input>
     );
   } else {
@@ -35,6 +38,7 @@ export default function ContactItem({
         name={name}
         className={className}
         onChange={handleChange}
+        value={value === null ? "" : value}
       ></textarea>
     );
   }
