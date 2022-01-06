@@ -676,6 +676,24 @@ textarea {
   .skillSet {
     margin: 50px auto;
   }
+  .contactItemTitle {
+    font-size: 20px;
+  }
+  .contactTitle {
+    font-size: 25px;
+  }
+  .contactName {
+    height: 30px;
+    font-size: 15px;
+  }
+  .contactEmail {
+    height: 30px;
+    font-size: 15px;
+  }
+  .contactMessage {
+    height: 150px;
+    font-size: 15px;
+  }
 }
 
 @-webkit-keyframes typing {
